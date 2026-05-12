@@ -572,71 +572,10 @@ avatar_url: u.avatar_url || u.google_avatar || null
 // Jika tidak → coba google_avatar
 // Jika keduanya null → komponen Avatar tampilkan inisial
 ```
-
 ---
 
-## 🚀 Cara Menjalankan
-
-### Prasyarat
-
-- Node.js `≥ 18`
-- MySQL `≥ 8.0`
-- npm `≥ 9`
-
-### Langkah Instalasi
-
-```bash
-# 1. Clone repository
-git clone https://github.com/username/emoji-quest.git
-cd emoji-quest
-
-# 2. Install dependencies
-npm install
-
-# 3. Buat file konfigurasi
-cp .env.example .env.local
-```
-
-### Konfigurasi `.env.local`
-
-```env
-# Database
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=password_mysql_anda
-DB_NAME=emoji_quest
-
-# JWT
-JWT_SECRET=string_acak_panjang_minimal_32_karakter
-
-# Google OAuth (opsional)
-NEXT_PUBLIC_GOOGLE_CLIENT_ID=xxxx.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=GOCSPX-xxxx
-
-# URLs
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-NEXT_PUBLIC_WS_URL=ws://localhost:3001
-```
-
-```bash
-# 4. Setup database (buat tabel otomatis)
-npm run db:setup
-
-# 5. Jalankan server
-npm run dev:all   # Next.js + WebSocket sekaligus
-
-# Atau terpisah:
-# Terminal 1:
-npm run dev       # Next.js (port 3000)
-# Terminal 2:
-npm run dev:ws    # WebSocket (port 3001)
-```
-
-Buka **http://localhost:3000** ✨
 
 ---
-
 ## 📁 Struktur Folder
 
 ```
